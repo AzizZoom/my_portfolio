@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap');
 
 :root {
-  --primaryColor: #fff;
-  --navColor1: #21292c;
-  --navColor2: #323f75;
-  --navColor3: #ac3e3b;
-  --navColor4: #2f8735;
-  --navColor5: #ac8a3b;
-  --navColor6: #7f2c6a;
+  --navColor1: rgb(245, 245, 245);
+  --navColor2: rgb(230, 230, 230);
+  --navColor3: rgb(215, 215, 215);
+  --navColor4: rgb(200, 200, 200);
+  --navColor5: rgb(185, 185, 185);
+  --navColor6: rgb(170, 170, 170);
+  --textColor: #2e2e2e;
 }
 
 html {
@@ -19,6 +19,7 @@ body {
   background: #000;
   font-family: 'nunito', 'sans-serif';
   user-select: none;
+  overflow-x: hidden;
 }
 
 /* --- Navigation Menu ------------------------------ */
@@ -68,7 +69,7 @@ nav ul li {
 nav li a {
   position: relative;
   top: 45%;
-  color: #fff;
+  color: var(--textColor);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -85,7 +86,7 @@ nav li a::before {
   content: "";
   width: 25vw;
   height: 1px;
-  background-color: #fff;
+  background-color: var(--textColor);
   position: absolute;
   top: 47.5%;
   left: 0;
@@ -206,7 +207,8 @@ nav li:nth-of-type(6) {
 .bar3 {
   width: 35px;
   height: 2px;
-  background-color: #fff;
+  background-color: var(--navColor1);
+  box-shadow: 0 0 5px var(--textColor);
   margin: 8px 0;
   transition: 0.4s;
 }
@@ -235,10 +237,16 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--primaryColor);
+  color: var(--textColor);
 }
+
+.sectionHeading {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+/* Section: Home */
 
 section#home {
   background-image: url(https://images.unsplash.com/20/dusty-sky.JPG?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
@@ -260,47 +268,192 @@ section#home {
   top: 1.5rem;
   left: 4.5rem;
   text-decoration: none;
-  font-size: 0.8rem;
   padding-bottom: 5px;
-  color: var(--primaryColor);
-  border-bottom: 1px solid var(--primaryColor);
+  color: var(--navColor1);
+  border-bottom: 1px solid var(--navColor1);
 }
 
 section#home span#welcomeHeading {
   text-align: center;
   font-size: 2.5rem;
   padding: 5px 10px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease-in-out forwards;
+  color: var(--navColor1);
 }
 
-/* Define the keyframes for the animation */
-@keyframes fadeInUp {
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
+/* Section: About-Me */
 
 section#about-me {
   background-color: var(--navColor2);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: center;
 }
+
+section#about-me h1 {
+  grid-column: 1/-1;
+}
+
+section#about-me img {
+  width: 350px;
+}
+
+section#about-me p {
+  padding-left: 60px;
+  font-size: 1.2rem;
+}
+
+/* Section: Skills & Qualifications */
 
 section#skills {
   background-color: var(--navColor3);
 }
 
-section#projects {
+section#qualifications {
   background-color: var(--navColor4);
 }
 
-section#education {
-  background-color: var(--navColor5);
+section#skills,
+section#qualifications {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
 }
 
-section#links {
+section#skills div,
+section#qualifications div {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+section#skills div:last-of-type,
+section#qualifications div:last-of-type {
+  margin-bottom: 100px;
+}
+
+.skillsHeading {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.qualificationsHeading {
+  font-size: 1.2rem;
+}
+
+.qualificationsDate {
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+.skillsList,
+.qualificationsInfo {
+  padding: 0 300px;
+}
+
+/* Section: Projects */
+
+section#projects {
+  background-color: var(--navColor5);
+  min-height: 100vh;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-items: center;
+}
+
+section#projects h1 {
+  margin-top: 50px;
+  grid-column: 1/-1;
+}
+
+.projectItem {
+  text-align: center;
+  background-color: var(--navColor4);
+  padding: 20px;
+  margin: 50px 20px;
+  border-radius: 7px;
+  box-shadow: 0 10px 13px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, background-color 0.6s;
+}
+
+.projectItem:hover {
+  margin: 0 20px;
+  transform: scale(1.1);
+  background-color: rgb(197, 219, 226);
+}
+
+.projectItem:hover:last-of-type {
+  margin: 50px 20px;
+}
+
+.projectLink {
+  text-decoration: none;
+  color: var(--textColor);
+}
+
+.projectVideo {
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.projectHeader {
+  font-weight: 600;
+}
+
+.projectLanguage {
+  display: none;
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.8px;
+}
+
+.projectItem:hover .projectLanguage {
+  display: block;
+}
+
+.projectDescription {
+  display: none;
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.8px;
+}
+
+.projectItem:hover .projectDescription {
+  display: block;
+}
+
+/* Section: Contacts */
+
+section#contacts {
   background-color: var(--navColor6);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+}
+
+.contactsHeading {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.contactsIcons {
+  letter-spacing: 6px;
+  font-size: 3rem;
+}
+
+.contactsIcons a {
+  color: var(--textColor);
+  transition: color 0.3s;
+}
+
+.contactsIcons a:hover {
+  color: rgb(72, 98, 107);
+}
+
+.contactsEnd {
+  font-weight: 800;
 }
 
 /* Custom Scrollbar */
@@ -311,30 +464,16 @@ section#links {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #eeeeee;
+  background: var(--navColor2);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #a5a5a5;
+  background: var(--navColor6);
 }
 
 /* Media Query: Large Smartphone (Vertical) */
 @media (max-width: 1025px) {
-  .profile img {
-    top: 1rem;
-    left: 1.5rem;
-  }
-
-  .profile span {
-    top: 1.5rem;
-    left: 4.5rem;
-  }
-
-  section#home span#welcomeHeading {
-    font-size: 1.7rem;
-  }
-
   nav li a {
     transition: none;
   }
@@ -354,5 +493,112 @@ section#links {
   .menu-bars {
     top: 0.5rem;
     right: 1rem;
+  }
+
+  /* Sections */
+
+  .sectionHeading {
+    font-size: 1.2rem;
+    margin-top: 50px;
+  }
+
+  /* Section: Home */
+
+  .profile img {
+    top: 1rem;
+    left: 1.5rem;
+  }
+
+  .profile span {
+    top: 1.5rem;
+    left: 4.5rem;
+  }
+
+  section#home span#welcomeHeading {
+    font-size: 1.7rem;
+  }
+
+  /* Section: About Me */
+
+  section#about-me {
+    min-height: 100vh;
+    height: fit-content;
+    grid-template-columns: 1fr;
+  }
+  
+  section#about-me img {
+    grid-row: 2/3;
+    width: 60%;
+  }
+  
+  section#about-me p {
+    padding: 30px;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  /* Section: Skills & Qualifications */
+  
+  .skillsHeading,
+  .qualificationsHeading {
+    padding: 0 10px;
+    font-size: 1.1rem;
+  }
+
+  .qualificationsDate {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  
+  .skillsList {
+    padding: 0 50px;
+  }
+
+  .qualificationsInfo {
+    padding: 0 20px;
+  }
+
+  /* Section: Projects */
+
+  .projectItem {
+    transition: none;
+  }
+  
+  .projectItem:hover {
+    margin: 50px 20px;
+    transform: scale(1);
+    background-color: var(--navColor4);
+  }
+  
+  .projectLanguage {
+    display: block;
+  }
+  
+  .projectDescription {
+    display: block;
+  }
+  
+  /* Section: Contacts */
+  
+  .contactsHeading {
+    font-size: 1rem;
+  }
+  
+  .contactsIcons {
+    letter-spacing: 3px;
+    font-size: 2rem;
+  }
+  
+  .contactsIcons a {
+    transition: none;
+  }
+  
+  .contactsIcons a:hover {
+    color: var(--textColor);
+  }
+
+  .contactsEnd {
+    font-size: 0.8rem;
   }
 }
