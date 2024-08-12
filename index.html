@@ -6,6 +6,7 @@
     <title>My Portfolio</title>
     <link rel="icon" type="image/png" href="AZround.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Menu Overlay -->
@@ -16,9 +17,9 @@
                 <li class="slide-out-1" id="nav-1"><a href="#home">Home</a></li>
                 <li class="slide-out-2" id="nav-2"><a href="#about-me">About Me</a></li>
                 <li class="slide-out-3" id="nav-3"><a href="#skills">Skills</a></li>
-                <li class="slide-out-4" id="nav-4"><a href="#projects">Projects</a></li>
-                <li class="slide-out-5" id="nav-5"><a href="#education">Education</a></li>
-                <li class="slide-out-6" id="nav-6"><a href="#links">Links</a></li>
+                <li class="slide-out-4" id="nav-4"><a href="#qualifications">Qualifications</a></li>
+                <li class="slide-out-5" id="nav-5"><a href="#projects">Projects</a></li>
+                <li class="slide-out-6" id="nav-6"><a href="#contacts">Contacts</a></li>
             </ul>
          </nav>
     </div>
@@ -29,20 +30,169 @@
         <div class="bar3"></div>
      </div>
     <!-- Sections -->
-    <section id="home">
-        <div class="profile">
-            <img src="profilePic.png" alt="Profile Pic">
-            <span>Aziz Zoomkhawala</span>
-        </div>
-        <span id="welcomeHeading">Welcome To My Portfolio Webpage</span>
-    </section>
-    <section id="about-me"><h1>About Me</h1></section>
-    <section id="skills"><h1>Skills</h1></section>
-    <section id="projects"><h1>Projects</h1></section>
-    <section id="education"><h1>Education</h1></section>
-    <section id="links"><h1>Links</h1></section>
+        <!-- Home -->
+        <section id="home">
+            <div class="profile">
+                <img src="/profilePic.png" alt="Profile Pic">
+                <span data-aos="fade-left" data-aos-delay="500">Aziz Zoomkhawala</span>
+            </div>
+            <span class="sectionHeading" id="welcomeHeading" data-aos="fade-up">Welcome To My Portfolio Webpage</span>
+        </section>
+        <!-- About Me -->
+        <section id="about-me">
+            <h1 class="sectionHeading" data-aos="fade-up">About Me</h1>
+            <p data-aos="fade-left" data-aos-delay="500">Ambitious and dedicated programmer with a Bachelor's degree in Computer Applications. Proficient in JavaScript and CSS, with hands-on experience developing web application projects. I bring strong problem-solving abilities and coding skills. Seeking an entry-level position to apply my technical expertise and enthusiasm for technology to contribute in creating impactful projects within a dynamic tech environment.</p>
+            <img src="/profilePic.png" alt="Profile Pic" data-aos="flip-left" data-aos-delay="700">
+        </section>
+        <!-- Skills -->
+        <section id="skills">
+            <h1 class="sectionHeading" data-aos="fade-up">Skills</h1>
+            <div>
+                <span class="skillsHeading" data-aos="fade-left" data-aos-delay="500">Programming Languages</span>
+                <span class="skillsList" data-aos="fade-left" data-aos-delay="800">HTML, CSS, JavaScript, Python, C++, PHP, Android</span>
+            </div>
+            <div>
+                <span class="skillsHeading" data-aos="fade-left" data-aos-delay="500">Database Management System</span>
+                <span class="skillsList" data-aos="fade-left" data-aos-delay="800">MySQL</span>
+            </div>
+            <div>
+                <span class="skillsHeading" data-aos="fade-left" data-aos-delay="500">Soft Skills</span>
+                <span class="skillsList" data-aos="fade-left" data-aos-delay="800">Problem Solving and Debugging Skills, Communication Skills, Interpersonal Skills, Time Management Skills and Team Collaboration Skills</span>
+            </div>
+        </section>
+        <!-- Qualifications -->
+        <section id="qualifications">
+            <h1 class="sectionHeading" data-aos="fade-up">Qualifications</h1>
+            <div>
+                <span class="qualificationsHeading" data-aos="fade-right" data-aos-delay="500"><b>Thakur Polytechnic</b> <i>- B. Computer Application</i></span>
+                <span class="qualificationsDate" data-aos="fade-right" data-aos-delay="700">August 2021 - July 2024</span>
+                <span class="qualificationsInfo" data-aos="fade-right" data-aos-delay="900">Passed with CGPA of 6.46</span>
+            </div>
+            <div>
+                <span class="qualificationsHeading" data-aos="fade-right" data-aos-delay="500"><b>Thakur College of Science and Commerce</b> <i>- Higher Secondary (12th)</i></span>
+                <span class="qualificationsDate" data-aos="fade-right" data-aos-delay="700">June 2019 - May 2021</span>
+                <span class="qualificationsInfo" data-aos="fade-right" data-aos-delay="900">Passed scoring 78.33%</span>
+            </div>
+            <div>
+                <span class="qualificationsHeading" data-aos="fade-right" data-aos-delay="500"><b>Cambridge School</b> <i>- Secondary (10th)</i></span>
+                <span class="qualificationsDate" data-aos="fade-right" data-aos-delay="700">May 2019</span>
+                <span class="qualificationsInfo" data-aos="fade-right" data-aos-delay="900">Passed with distinction scoring 87.85%</span>
+            </div>
+        </section>
+        <!-- Projects -->
+        <section id="projects">
+            <h1 class="sectionHeading" data-aos="fade-up">Projects</h1>
+            <div class="projectItem">
+                    <video src="/videos/gbvms.mp4" class="projectVideo" muted></video>
+                    <span class="projectHeader">GBVMS</span>
+                    <span class="projectLanguage"><i class="fa-brands fa-php"></i></span>
+                    <span class="projectDescription"><b>Final Year College Project</b>. A complete web-based Visitor Management System for gate-keeping</span>
+            </div>
+            <div class="projectItem">
+                <a href="https://azizzoom.github.io/pong_by_aziz/" target="_blank" rel="noopener noreferrer" class="projectLink">
+                    <video src="/videos/pong.mp4" class="projectVideo" muted loop></video>
+                    <span class="projectHeader">Pong</span>
+                    <span class="projectLanguage"><i class="fa-brands fa-square-js"></i>  <i class="fa-brands fa-css3-alt"></i></span>
+                    <span class="projectDescription">Basic version of the classic pong game</span>
+                </a>
+            </div>
+            <div class="projectItem">
+                <a href="https://azizzoom.github.io/canvas_by_aziz/" target="_blank" rel="noopener noreferrer"  class="projectLink">
+                    <video src="/videos/canvas.mp4" class="projectVideo" muted loop></video>
+                    <span class="projectHeader">Canvas</span>
+                    <span class="projectLanguage"><i class="fa-brands fa-square-js"></i>  <i class="fa-brands fa-css3-alt"></i></span>
+                    <span class="projectDescription">Basic version of MS Paint where users can create drawings using a brush</span>
+                </a>
+            </div>
+            <div class="projectItem">
+                <a href="https://azizzoom.github.io/kanban_board_by_aziz/" target="_blank" rel="noopener noreferrer"  class="projectLink">
+                    <video src="/videos/kanbanBoard.mp4" class="projectVideo" muted loop></video>
+                    <span class="projectHeader">Kanban Board</span>
+                    <span class="projectLanguage"><i class="fa-brands fa-square-js"></i>  <i class="fa-brands fa-css3-alt"></i></span>
+                    <span class="projectDescription">Users can drag and drop items from one section to another and manage their task efficiently</span>
+                </a>
+            </div>
+            <div class="projectItem">
+                <a href="https://azizzoom.github.io/quote_generator_by_aziz/" target="_blank" rel="noopener noreferrer" class="projectLink">
+                    <video src="/videos/quoteGenerator.mp4" class="projectVideo" muted loop></video>
+                    <span class="projectHeader">Quote Generator</span>
+                    <span class="projectLanguage"><i class="fa-brands fa-square-js"></i>  <i class="fa-brands fa-css3-alt"></i></span>
+                    <span class="projectDescription">Uses a Quote API to generate random quotes</span>
+                </a>
+            </div>
+            <div class="projectItem">
+                <a href="https://azizzoom.github.io/rock_paper_scissors_by_aziz/" target="_blank" rel="noopener noreferrer" class="projectLink">
+                    <video src="/videos/rockPaperScissors.mp4" class="projectVideo" muted loop></video>
+                    <span class="projectHeader">Rock Paper Scissors</span>
+                    <span class="projectLanguage"><i class="fa-brands fa-square-js"></i>  <i class="fa-brands fa-css3-alt"></i></span>
+                    <span class="projectDescription">Play the classic rock, paper, scissors game against the computer</span>
+                </a>
+            </div>
+            <div class="projectItem">
+                <a href="https://azizzoom.github.io/background_changer_by_aziz/" target="_blank" rel="noopener noreferrer" class="projectLink">
+                    <video src="/videos/backgroundChanger.mp4" class="projectVideo" muted loop></video>
+                    <span class="projectHeader">Background Changer</span>
+                    <span class="projectLanguage"><i class="fa-brands fa-square-js"></i>  <i class="fa-brands fa-css3-alt"></i></span>
+                    <span class="projectDescription">Switch between different background options on a Figma landing page</span>
+                </a>
+            </div>
+            <div class="projectItem">
+                <a href="https://azizzoom.github.io/calculator_by_aziz/" target="_blank" rel="noopener noreferrer" class="projectLink">
+                    <video src="/videos/calculator.mp4" class="projectVideo" muted loop></video>
+                    <span class="projectHeader">Calculator</span>
+                    <span class="projectLanguage"><i class="fa-brands fa-square-js"></i>  <i class="fa-brands fa-css3-alt"></i></span>
+                    <span class="projectDescription">This webpage allows users to make basic calculations using a calculator</span>
+                </a>
+            </div>
+            <div class="projectItem">
+                <a href="https://azizzoom.github.io/custom_countdown_by_aziz/" target="_blank" rel="noopener noreferrer" class="projectLink">
+                    <video src="/videos/customCountdown.mp4" class="projectVideo" muted loop></video>
+                    <span class="projectHeader">Custom Countdown</span>
+                    <span class="projectLanguage"><i class="fa-brands fa-square-js"></i>  <i class="fa-brands fa-css3-alt"></i></span>
+                    <span class="projectDescription">User can create a custom countdown to any date</span>
+                </a>
+            </div>
+            <div class="projectItem">
+                <a href="https://azizzoom.github.io/music_player_by_aziz/" target="_blank" rel="noopener noreferrer" class="projectLink">
+                    <video src="/videos/musicPlayer.mp4" class="projectVideo" muted loop></video>
+                    <span class="projectHeader">Music Player</span>
+                    <span class="projectLanguage"><i class="fa-brands fa-square-js"></i>  <i class="fa-brands fa-css3-alt"></i></span>
+                    <span class="projectDescription">A music player webpage</span>
+                </a>
+            </div>
+            <div class="projectItem">
+                <a href="https://azizzoom.github.io/dark_mode_by_aziz/" target="_blank" rel="noopener noreferrer" class="projectLink">
+                    <video src="/videos/darkMode.mp4" class="projectVideo" muted loop></video>
+                    <span class="projectHeader">Dark Mode</span>
+                    <span class="projectLanguage"><i class="fa-brands fa-square-js"></i>  <i class="fa-brands fa-css3-alt"></i></span>
+                    <span class="projectDescription">A webpage that can switch between dark mode and light mode</span>
+                </a>
+            </div>
+        </section>
+        <!-- Contacts -->
+        <section id="contacts">
+            <h1 class="sectionHeading" data-aos="fade-up">Contacts</h1>
+            <span class="contactsHeading" data-aos="fade-left" data-aos-delay="500">Contact me on</span>
+            <div class="contactsIcons">
+                <a href="http://www.linkedin.com/in/aziz-zoomkhawala" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin" data-aos="fade-left" data-aos-delay="700"></i></a>
+                <a href="https://github.com/azizzoom" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-square-github" data-aos="fade-left" data-aos-delay="750"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=azizzoomkha@gmail.com&su=Subject%20Here&body=Message%20Body%20Here" target="_blank" rel="noopener noreferrer" title="Gmail"><i class="fa-solid fa-square-envelope" data-aos="fade-left" data-aos-delay="800"></i></a>
+                <a href="https://wa.me/919029014444" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fa-brands fa-square-whatsapp" data-aos="fade-left" data-aos-delay="850"></i></a>
+            </div>
+            <span class="contactsEnd">Looking forward to hearing from you</span>
+        </section>
     <!-- Script -->
     <script src="https://kit.fontawesome.com/7f43ff4039.js" crossorigin="anonymous"></script>
+    <!-- AOS.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            delay: 200,
+            duration: 1500,
+            once: true,
+        });
+    </script>
+    <!-- Script.js -->
     <script src="script.js"></script>
 </body>
 </html>
